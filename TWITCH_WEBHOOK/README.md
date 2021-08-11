@@ -1,6 +1,7 @@
 # Get SMS Notifications via Twitch Webhook When Your Streamer Goes Online
 
-- [Youtube Video of the tutorial](https://www.youtube.com/watch?v=vM-nK3ikHu0){:target='\_blank'}
+- <a href="https://www.youtube.com/watch?v=vM-nK3ikHu0" target="_blank">Youtube Video of the tutorial</ a>
+
 - credit to code inspiration here: <a href='https://www.courier.com/blog/how-to-handle-real-time-twitch-events'>Courier Blog Handle Twitch Events</a>
   - note: blog series goes into much further detail around another tool and takes some further (confusing) verification steps on the server side, which I skip (unecessary)
 
