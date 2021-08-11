@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "twilio": "^3.66.1",
+    "twitch": "^4.6.4",
+    "twitch-auth": "^4.6.4"
+  }
+}
