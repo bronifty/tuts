@@ -1,5 +1,7 @@
 # Social Media Scraper Tool (with Puppeteer Login, download of images and upload to cloud bucket inside a Docker Container)
 
+[Youtube Tutorial Link](https://youtu.be/u8zCeA7lzDE)
+
 1. Rename env.example to .env and set your variables (follow GCP instructions to get a keyfile for your bucket after you set the access on it and place it in the root of your project then link to it by name - just like it's a literal value)
    a. TLDR; https://cloud.google.com/iam/docs/creating-managing-service-account-keys
    i. Go to Service Accounts choose project add a service account with owner role and create a key for it of JSON type and download it. Put it in the root of the project (rename it to anything you like) and refer to it by its name in the .env file
