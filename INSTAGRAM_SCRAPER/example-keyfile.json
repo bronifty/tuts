@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "test-12345",
+  "private_key_id": "d3984b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIyIb6YGq95neO\nZ1LI6j8Mk22p2Wt9tB2PVDLLkwLjCsd\nuNNMjzwaS6DAW5idoaDuVj7boTzrcTQFWToUzMHvMwk/x5MyaI8ZYYdr8xn/Q\nhyXQfpD22ryhNHBex5rWEdCGJxVLG3fye/m0tdzO3H\nuzkfL6odjqHiX4mfIHFwL03q\n-----END PRIVATE KEY-----\n",
+  "client_email": "cr5@cr5.iam.gserviceaccount.com",
+  "client_id": "101",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cr5@cr5.iam.gserviceaccount.com"
+}

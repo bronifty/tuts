@@ -1,0 +1,68 @@
+
+FROM node
+# move node_modules up in the app's directory to hide from the host mapping (to avoid conflicts with binaries of desktop versus container image) and install
+WORKDIR /usr/src
+COPY ./package*.json ./
+RUN npm i --no-optional && npm cache clean --force
+# put the node modules' binaries on the PATH
+ENV PATH /usr/src/node_modules/.bin:$PATH
+# set the app directory
+WORKDIR /usr/src/app
+COPY . .
+# RUN set -ex
+# RUN apt-get -y update
+# RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+# RUN apt install ./google-chrome-stable_current_amd64.deb -y
+
+RUN set -ex; \
+  apt-get -y update; \
+  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb; \
+  apt install -y ./google-chrome-stable_current_amd64.deb ;
+
+ENV PORT=3000
+EXPOSE 3000
+
+CMD npm start
+
+
+# Copyright 2020 Google LLC. All rights reserved.
+# Use of this source code is governed by the Apache 2.0
+# license that can be found in the LICENSE file.
+
+# [START cloudrun_pubsub_dockerfile]
+# [START run_pubsub_dockerfile]
+
+# Use the official lightweight Node.js 12 image.
+# https://hub.docker.com/_/node
+# FROM node:12-slim
+# Install Imagemagick into the container image.
+# For more on system packages review the system packages tutorial.
+# https://cloud.google.com/run/docs/tutorials/system-packages#dockerfile
+# RUN set -ex; \
+#   apt-get -y update; \
+#   apt-get -y install imagemagick; \
+#   rm -rf /var/lib/apt/lists/*
+
+# Create and change to the app directory.
+# WORKDIR /usr/src/app
+
+# Copy application dependency manifests to the container image.
+# A wildcard is used to ensure both package.json AND package-lock.json are copied.
+# Copying this separately prevents re-running npm install on every code change.
+# COPY package*.json ./
+
+# Install dependencies.
+# If you add a package-lock.json speed your build by switching to 'npm ci'.
+# RUN npm ci --only=production
+# RUN npm install --production
+
+# Copy local code to the container image.
+# COPY . .
+# ENV PORT=3000
+# EXPOSE 3000
+
+# Run the web service on container startup.
+# CMD [ "npm", "start" ]
+
+# [END run_pubsub_dockerfile]
+# [END cloudrun_pubsub_dockerfile]
