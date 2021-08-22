@@ -1,0 +1,20 @@
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
+ports:
+  - port: 3000
+    onOpen: open-preview
+# RUN following command in gitpod workspace terminal:
+# $ gp init
+
+# it will produce something like the below
+# # Commands to start on workspace startup
+# tasks:
+#   - init: yarn install
+#     command: yarn build
+# # Ports to expose on workspace startup
+# ports:
+#   - port: 8000
+#     onOpen: open-preview
+# image:
+# file: Dockerfile

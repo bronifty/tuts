@@ -1,0 +1,14 @@
+// launch.json
+
+{
+  "version": "15.4.0",
+  "configurations": [
+    {
+      "type": "node",
+      "runtimeVersion": "15.4.0",
+      "request": "launch",
+      "name": "Launch",
+      "program": "${workspaceFolder}/index.js"
+    }
+  ]
+}
